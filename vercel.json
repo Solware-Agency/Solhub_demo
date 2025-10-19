@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/download-pdf.js": {
+      "maxDuration": 40
+    },
+    "api/send-email.js": {
+      "maxDuration": 40
+    }
+  }
+}
