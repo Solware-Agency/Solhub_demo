@@ -8,7 +8,7 @@ import { Button } from '@shared/components/ui/button'
 type UnifiedMedicalRecord = MedicalCaseWithPatient
 import { useToast } from '@shared/hooks/use-toast'
 import { Input } from '@shared/components/ui/input'
-import { useAuth } from '@app/providers/AuthContext'
+import { useAuth } from '@app/providers/MockAuthContext'
 import { useUserProfile } from '@shared/hooks/useUserProfile'
 import { useExportToExcel } from '@shared/hooks/useExportToExcel'
 import { ExportConfirmationModal } from '@shared/components/ui/ExportConfirmationModal'
@@ -202,10 +202,10 @@ const CasesTable: React.FC<CasesTableProps> = React.memo(
 			],
 			[],
 		)
-		const handleGenerateEmployeeCase = useCallback((case_: UnifiedMedicalRecord) => {
-			setSelectedCaseForGenerate(case_)
-			setIsStepsModalOpen(true)
-		}, [])
+		// const handleGenerateEmployeeCase = useCallback((case_: UnifiedMedicalRecord) => {
+		// 	setSelectedCaseForGenerate(case_)
+		// 	setIsStepsModalOpen(true)
+		// }, [])
 
 		// Effect to update selected case when cases data changes and we need to update
 		useEffect(() => {
@@ -1063,7 +1063,7 @@ const CasesTable: React.FC<CasesTableProps> = React.memo(
 												key={case_.id}
 												case_={case_}
 												onView={handleCaseSelect}
-												onGenerate={handleGenerateEmployeeCase}
+												// onGenerate={handleGenerateEmployeeCase}
 												onReactions={handleGenerateCase}
 												canRequest={canRequest}
 											/>
@@ -1212,7 +1212,7 @@ const CasesTable: React.FC<CasesTableProps> = React.memo(
 																<CaseActionsPopover
 																	case_={case_}
 																	onView={handleCaseSelect}
-																	onGenerate={handleGenerateEmployeeCase}
+																	// onGenerate={handleGenerateEmployeeCase}
 																	onReactions={handleGenerateCase}
 																	canRequest={canRequest}
 																/>
@@ -1421,7 +1421,7 @@ const CasesTable: React.FC<CasesTableProps> = React.memo(
 										key={case_.id}
 										case_={case_}
 										onView={handleCaseSelect}
-										onGenerate={handleGenerateEmployeeCase}
+										// onGenerate={handleGenerateEmployeeCase}
 										onReactions={handleGenerateCase}
 										canRequest={canRequest}
 									/>
@@ -1574,7 +1574,7 @@ const CasesTable: React.FC<CasesTableProps> = React.memo(
 																<CaseActionsPopover
 																	case_={case_}
 																	onView={handleCaseSelect}
-																	onGenerate={handleGenerateEmployeeCase}
+																	// onGenerate={handleGenerateEmployeeCase}
 																	onReactions={handleGenerateCase}
 																	canRequest={canRequest}
 																/>
