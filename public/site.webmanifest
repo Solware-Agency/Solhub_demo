@@ -1,6 +1,6 @@
 {
-  "name": "Conspat",
-  "short_name": "Conspat",
+  "name": "SolHub",
+  "short_name": "SolHub",
   "description": "Panel de Control para la gestión de citas médicas",
   "start_url": "/",
   "display": "standalone",
